@@ -1,0 +1,11 @@
+
+<div class="alert alert-dark" role="alert" ng-show="msgAlertM != ''">
+  {{msgAlertM}}
+</div>
+
+<h3 ng-show="!entryDeleted">Are you sure you want to delete this entry?</h3>
+<div class="form-group">
+		<button class="btn btn-submit" ng-click="deleteEntry()" type="submit" ng-show="!entryDeleted">Ok</button>
+		<button class="btn btn-submit" ng-click="back()" type="submit">Back</button>
+		<img src="img/ajax-loader.gif" ng-show="showLoader">		
+</div>

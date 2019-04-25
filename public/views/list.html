@@ -1,0 +1,28 @@
+<div class="row">
+	<div class="col-xs-12">
+		<div class="row">
+			<div class="col-xs-12" style="margin-bottom: 30px;">				
+				Search title or user: <input class="form-control" ng-model="search"  />
+			</div>
+		</div>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Posted By</th>
+					<th></th>
+					<th></th>
+				</tr>				
+			</thead>
+			<tbody>
+				<tr ng-repeat="b in blogs | filter: search">
+					<td>{{b.title}}</td>
+					<td>{{b.user.name}}</td>
+					<td><a href="#!/edit-entry/{{b.idBlog}}">Edit</a></td>
+					<td><a href="#!/delete-entry/{{b.idBlog}}">Delete</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
